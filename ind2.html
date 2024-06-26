@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps - Adicionar Ponto por Endereço</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body onload="initMap()">
+    <div id="map" style="height: 500px; width: 100%;"></div>
+    <div id="addLocationForm">
+        <h3>Adicionar Localização</h3>
+        <form id="locationForm">
+            <label for="address">Endereço:</label><br>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="name">Nome:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="info">Informações:</label><br>
+            <input type="text" id="info" name="info" required><br>
+
+            <label for="price">Valor:</label><br>
+            <input type="text" id="price" name="price" required><br>
+
+            <label for="image">Imagem:</label><br>
+            <input type="file" id="image" name="image"><br><br>
+
+            <button type="submit">Adicionar</button>
+        </form>
+        <br>
+        <button onclick="saveLocations()">Salvar Localizações</button>
+        <br><br>
+        <input type="file" id="fileInput" accept=".json" style="display: none;">
+    </div>
+    <script src="maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABtMF7HLvrhCj2OgIiIcRlwurWBCUtWJA"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
+</body>
+</html>
